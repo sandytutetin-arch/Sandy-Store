@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sandy Store | Amigurumis y Crochet</title>
+
+  <meta
+    name="description"
+    content="Sandy Store: amigurumis, flores de crochet y regalos hechos a mano. Pedidos personalizados por WhatsApp e Instagram."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root{
+      --morado:#54205f;
+      --morado-oscuro:#35113d;
+      --rosado:#f7a8c4;
+      --rosado-claro:#fff1f6;
+      --amarillo:#f9d35c;
+      --blanco:#ffffff;
+      --texto:#432f46;
+      --gris:#746575;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'DM Sans', sans-serif;
+      color:var(--texto);
+      background:#fffafc;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      width:100%;
+      display:block;
+    }
+
+    /* NAV */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid #f5dce6;
+    }
+
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      padding:13px 25px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+      color:var(--morado);
+      font-size:1.2rem;
+    }
+
+    .brand-icon{
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      background:var(--morado);
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:25px;
+    }
+
+    nav a{
+      font-weight:600;
+      font-size:.94rem;
+    }
+
+    nav a:hover{
+      color:#d95d8d;
+    }
+
+    .nav-whatsapp{
+      background:var(--morado);
+      color:white !important;
+      padding:10px 18px;
+      border-radius:30px;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:88vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 15% 20%, #ffe0ec 0, transparent 30%),
+        radial-gradient(circle at 85% 25%, #fff1b8 0, transparent 25%),
+        linear-gradient(135deg,#fff7fa,#fffdf5);
+    }
+
+    .hero-container{
+      max-width:1200px;
+      width:100%;
+      margin:auto;
+      padding:70px 25px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      gap:60px;
+    }
+
+    .tag{
+      display:inline-block;
+      background:#ffe3ee;
+      color:#a53863;
+      padding:8px 17px;
+      border-radius:25px;
+      font-size:.9rem;
+      font-weight:700;
+      margin-bottom:20px;
+    }
+
+    .hero h1{
+      color:var(--morado);
+      font-size:clamp(3rem,7vw,6.3rem);
+      font-family:'Pacifico', cursive;
+      line-height:1.15;
+      font-weight:400;
+    }
+
+    .hero h2{
+      margin:8px 0 20px;
+      letter-spacing:5px;
+      font-size:1.4rem;
+      color:var(--morado-oscuro);
+    }
+
+    .hero p{
+      max-width:570px;
+      font-size:1.1rem;
+      color:var(--gris);
+      margin-bottom:30px;
+    }
+
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:13px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 24px;
+      border-radius:30px;
+      font-weight:700;
+      transition:.25s;
+    }
+
+    .btn-primary{
+      background:var(--morado);
+      color:white;
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 30px rgba(84,32,95,.24);
+    }
+
+    .btn-secondary{
+      border:2px solid var(--morado);
+      color:var(--morado);
+      background:white;
+    }
+
+    .btn-secondary:hover{
+      background:var(--rosado-claro);
+    }
+
+    .hero-image{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .logo-card{
+      position:relative;
+      width:min(500px,90%);
+      aspect-ratio:1/1;
+      background:white;
+      padding:25px;
+      border-radius:45px;
+      box-shadow:0 25px 70px rgba(102,49,84,.15);
+      transform:rotate(2deg);
+    }
+
+    .logo-card img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      border-radius:30px;
+    }
+
+    /* SECCIONES */
+
+    section{
+      padding:90px 25px;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title span{
+      color:#d95d8d;
+      font-weight:700;
+      text-transform:uppercase;
+      font-size:.85rem;
+      letter-spacing:2px;
+    }
+
+    .section-title h2{
+      color:var(--morado);
+      font-size:clamp(2rem,5vw,3rem);
+      margin:8px 0;
+    }
+
+    .section-title p{
+      color:var(--gris);
+      max-width:650px;
+      margin:auto;
+    }
+
+    /* PRODUCTOS */
+
+    .productos{
+      background:white;
+    }
+
+    .products-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+    }
+
+    .product{
+      background:#fff;
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:0 8px 35px rgba(70,39,58,.09);
+      transition:.3s;
+    }
+
+    .product:hover{
+      transform:translateY(-8px);
+      box-shadow:0 15px 45px rgba(70,39,58,.15);
+    }
+
+    .product-image{
+      height:310px;
+      overflow:hidden;
+      background:#f8edf2;
+    }
+
+    .product-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:.5s;
+    }
+
+    .product:hover img{
+      transform:scale(1.05);
+    }
+
+    .product-content{
+      padding:22px;
+    }
+
+    .product-content h3{
+      color:var(--morado);
+      font-size:1.25rem;
+      margin-bottom:7px;
+    }
+
+    .product-content p{
+      color:var(--gris);
+      font-size:.94rem;
+      margin-bottom:15px;
+    }
+
+    .consultar{
+      color:#ca4678;
+      font-weight:700;
+    }
+
+    /* PERSONALIZADOS */
+
+    .personalizados{
+      background:
+        linear-gradient(
+          135deg,
+          rgba(84,32,95,.96),
+          rgba(126,45,99,.94)
+        );
+      color:white;
+    }
+
+    .custom-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:70px;
+      align-items:center;
+    }
+
+    .custom-text h2{
+      font-size:clamp(2.2rem,5vw,3.7rem);
+      line-height:1.15;
+      margin-bottom:20px;
+    }
+
+    .custom-text p{
+      color:#f7ddeb;
+      font-size:1.05rem;
+      margin-bottom:25px;
+    }
+
+    .features{
+      display:grid;
+      gap:15px;
+      margin-bottom:30px;
+    }
+
+    .feature{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+
+    .check{
+      background:#f7a8c4;
+      width:27px;
+      height:27px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+      color:var(--morado);
+      font-weight:bold;
+    }
+
+    .custom-card{
+      background:white;
+      color:var(--texto);
+      padding:40px;
+      border-radius:30px;
+      box-shadow:0 25px 60px rgba(0,0,0,.18);
+    }
+
+    .custom-card h3{
+      color:var(--morado);
+      font-size:1.7rem;
+      margin-bottom:15px;
+    }
+
+    .steps{
+      display:grid;
+      gap:22px;
+    }
+
+    .step{
+      display:flex;
+      gap:16px;
+    }
+
+    .step-number{
+      width:42px;
+      height:42px;
+      flex-shrink:0;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--rosado-claro);
+      color:#be3e70;
+      font-weight:800;
+    }
+
+    /* SOBRE */
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .about-box{
+      background:#fff0f6;
+      padding:50px;
+      border-radius:35px;
+      text-align:center;
+      font-size:6rem;
+    }
+
+    .about-text h2{
+      color:var(--morado);
+      font-size:2.6rem;
+      margin-bottom:20px;
+    }
+
+    .about-text p{
+      color:var(--gris);
+      margin-bottom:16px;
+    }
+
+    /* CONTACTO */
+
+    .contact{
+      background:#fff1f6;
+    }
+
+    .contact-grid{
+      max-width:900px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .contact-card{
+      background:white;
+      padding:30px 18px;
+      border-radius:24px;
+      text-align:center;
+      transition:.25s;
+      box-shadow:0 7px 25px rgba(70,39,58,.07);
+    }
+
+    .contact-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .contact-icon{
+      font-size:2rem;
+      margin-bottom:12px;
+    }
+
+    .contact-card h3{
+      color:var(--morado);
+      margin-bottom:7px;
+    }
+
+    .contact-card p{
+      color:var(--gris);
+      word-break:break-word;
+      font-size:.93rem;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:var(--morado-oscuro);
+      color:#eaddea;
+      text-align:center;
+      padding:40px 20px;
+    }
+
+    footer strong{
+      color:white;
+    }
+
+    footer p{
+      margin:5px 0;
+    }
+
+    /* WHATSAPP FLOTANTE */
+
+    .floating-whatsapp{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      width:62px;
+      height:62px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:#25D366;
+      color:white;
+      font-size:30px;
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+      z-index:1500;
+      transition:.25s;
+    }
+
+    .floating-whatsapp:hover{
+      transform:scale(1.08);
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+      nav a:not(.nav-whatsapp){
+        display:none;
+      }
+
+      .hero-container,
+      .custom-grid,
+      .about-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        text-align:center;
+      }
+
+      .hero p{
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .buttons{
+        justify-content:center;
+      }
+
+      .hero-image{
+        grid-row:1;
+      }
+
+      .logo-card{
+        max-width:370px;
+      }
+
+      .products-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+    @media(max-width:580px){
+
+      section{
+        padding:65px 18px;
+      }
+
+      .nav{
+        padding:10px 15px;
+      }
+
+      .brand{
+        font-size:1rem;
+      }
+
+      .nav-whatsapp{
+        padding:9px 13px;
+        font-size:.82rem;
+      }
+
+      .hero-container{
+        padding:45px 18px 70px;
+        gap:35px;
+      }
+
+      .products-grid{
+        grid-template-columns:1fr;
+      }
+
+      .product-image{
+        height:350px;
+      }
+
+      .custom-card,
+      .about-box{
+        padding:30px 20px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <a href="#inicio" class="brand">
+      <div class="brand-icon">🧶</div>
+      Sandy Store
+    </a>
+
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#personalizados">Personalizados</a>
+      <a href="#nosotros">Sobre nosotros</a>
+
+      <a
+        class="nav-whatsapp"
+        href="https://wa.me/56969151966?text=Hola%20Sandy%20Store%20💗%20Quisiera%20hacer%20una%20consulta."
+        target="_blank"
+      >
+        Pedir por WhatsApp
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+  <div class="hero-container">
+
+    <div>
+
+      <div class="tag">
+        🧶 Hecho a mano con amor
+      </div>
+
+      <h1>Sandy</h1>
+      <h2>STORE</h2>
+
+      <p>
+        Amigurumis, flores y creaciones de crochet hechas a mano.
+        Encuentra un regalo especial o solicita un diseño personalizado
+        creado especialmente para ti.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#productos" class="btn btn-primary">
+          Ver productos ♡
+        </a>
+
+        <a
+          href="https://www.instagram.com/sandy_store09/"
+          target="_blank"
+          class="btn btn-secondary"
+        >
+          Instagram
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-image">
+
+      <div class="logo-card">
+        <!-- CAMBIA logo.png POR EL NOMBRE DEL ARCHIVO DE TU LOGO -->
+        <img
+          src="logo.png"
+          alt="Logo de Sandy Store"
+        >
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRODUCTOS -->
+
+<section class="productos" id="productos">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>Nuestras creaciones</span>
+
+      <h2>Productos Sandy Store 🧶</h2>
+
+      <p>
+        Cada creación está hecha a mano, por lo que los colores,
+        diseños y disponibilidad pueden variar.
+      </p>
+
+    </div>
+
+
+    <div class="products-grid">
+
+
+      <!-- PRODUCTO 1 -->
+
+      <article class="product">
+
+        <div class="product-image">
+          <img
+            src="img/snoopy.jpg"
+            alt="Amigurumi de perrito tejido a crochet"
+          >
+        </div>
+
+        <div class="product-content">
+
+          <h3>Amigurumis</h3>
+
+          <p>
+            Tiernos personajes tejidos completamente a mano.
+            Consulta diseños y disponibilidad.
+          </p>
+
+          <a
+            class="consultar"
+            href="https://wa.me/56969151966?text=Hola%20Sandy%20Store%20💗%20Quisiera%20consultar%20por%20los%20amigurumis."
+            target="_blank"
+          >
+            Consultar por WhatsApp →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- PRODUCTO 2 -->
+
+      <article class="product">
+
+        <div class="product-image">
+          <img
+            src="img/conejito.jpg"
+            alt="Conejito amigurumi tejido a crochet"
+          >
+        </div>
+
+        <div class="product-content">
+
+          <h3>Conejitos de crochet</h3>
+
+          <p>
+            Amigurumis suaves y adorables, ideales para regalar
+            en ocasiones especiales.
+          </p>
+
+          <a
+            class="consultar"
+            href="https://wa.me/56969151966?text=Hola%20Sandy%20Store%20💗%20Quisiera%20consultar%20por%20los%20conejitos%20de%20crochet."
+            target="_blank"
+          >
+            Consultar por WhatsApp →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- PRODUCTO 3 -->
+
+      <article class="product">
+
+        <div class="product-image">
+          <img
+            src="img/pikachu.jpg"
+            alt="Amigurumi amarillo tejido a crochet"
+          >
+        </div>
+
+        <div class="product-content">
+
+          <h3>Personajes personalizados</h3>
+
+          <p>
+            Consulta por tu personaje favorito y opciones de
+            personalización.
+          </p>
+
+          <a
+            class="consultar"
+            href="https://wa.me/56969151966?text=Hola%20Sandy%20Store%20💗%20Quiero%20cotizar%20un%20amigurumi%20personalizado."
+            target="_blank"
+          >
+            Cotizar diseño →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- PRODUCTO 4 -->
+
+      <article class="product">
+
+        <div class="product-image">
+          <img
+            src="img/kirby.jpg"
+            alt="Amigurumi rosado tejido a crochet"
+          >
+        </div>
+
+        <div class="product-content">
+
+          <h3>Mini amigurumis</h3>
+
+          <p>
+            Diseños pequeños y llenos de detalles para regalar,
+            coleccionar o decorar.
+          </p>
+
+          <a
+            class="consultar"
+            href="https://wa.me/56969151966?text=Hola%20Sandy%20Store%20💗%20Quiero%20consultar%20por%20los%20mini%20amigurumis."
+            target="_blank"
+          >
+            Consultar →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- PRODUCTO 5 -->
+
+      <article class="product">
+
+        <div class="product-image">
+          <img
+            src="img/girasol.jpg"
+            alt="Girasol tejido a crochet"
+          >
+        </div>
+
+        <div class="product-content">
+
+          <h3>Flores de crochet</h3>
+
+          <p>
+            Flores tejidas que duran para siempre. Una alternativa
+            preciosa para regalar.
+          </p>
+
+          <a
+            class="consultar"
+            href="https://wa.me/56969151966?text=Hola%20Sandy%20Store%20🌻%20Quisiera%20consultar%20por%20las%20flores%20de%20crochet."
+            target="_blank"
+          >
+            Consultar →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- PRODUCTO 6 -->
+
+      <article class="product">
+
+        <div class="product-image">
+          <img
+            src="img/ramo.jpg"
+            alt="Ramo de flores tejido a crochet"
+          >
+        </div>
+
+        <div class="product-content">
+
+          <h3>Ramos tejidos</h3>
+
+          <p>
+            Ramos de flores de crochet preparados especialmente
+            para cumpleaños, aniversarios y regalos.
+          </p>
+
+          <a
+            class="consultar"
+            href="https://wa.me/56969151966?text=Hola%20Sandy%20Store%20🌷%20Quisiera%20cotizar%20un%20ramo%20de%20crochet."
+            target="_blank"
+          >
+            Cotizar ramo →
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PERSONALIZADOS -->
+
+<section class="personalizados" id="personalizados">
+
+  <div class="container custom-grid">
+
+    <div class="custom-text">
+
+      <h2>
+        ¿Tienes una idea especial? 💗
+      </h2>
+
+      <p>
+        En Sandy Store también puedes consultar por creaciones
+        personalizadas. Cuéntanos tu idea y veremos las posibilidades
+        para convertirla en crochet.
+      </p>
+
+      <div class="features">
+
+        <div class="feature">
+          <div class="check">✓</div>
+          <div>
+            <strong>Diseños personalizados</strong><br>
+            Consulta por personajes, colores y estilos.
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="check">✓</div>
+          <div>
+            <strong>Hecho completamente a mano</strong><br>
+            Cada pieza es única.
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="check">✓</div>
+          <div>
+            <strong>Regalos especiales</strong><br>
+            Perfectos para cumpleaños, aniversarios y otras ocasiones.
+          </div>
+        </div>
+
+      </div>
+
+      <a
+        href="https://wa.me/56969151966?text=Hola%20Sandy%20Store%20💗%20Tengo%20una%20idea%20para%20un%20pedido%20personalizado."
+        target="_blank"
+        class="btn"
+        style="background:#f7a8c4;color:#54205f;"
+      >
+        Quiero hacer un pedido
+      </a>
+
+    </div>
+
+
+    <div class="custom-card">
+
+      <h3>¿Cómo pedir?</h3>
+
+      <div class="steps">
+
+        <div class="step">
+
+          <div class="step-number">1</div>
+
+          <div>
+            <strong>Escríbenos</strong>
+            <p>
+              Contáctanos por WhatsApp o Instagram.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">2</div>
+
+          <div>
+            <strong>Cuéntanos tu idea</strong>
+            <p>
+              Puedes enviar una referencia, personaje, colores
+              o tipo de creación que deseas.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">3</div>
+
+          <div>
+            <strong>Recibe tu cotización</strong>
+            <p>
+              Te indicaremos valor, disponibilidad y detalles
+              del pedido.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">4</div>
+
+          <div>
+            <strong>¡Disfruta tu Sandy! 💗</strong>
+            <p>
+              Tu creación será realizada especialmente para ti.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- NOSOTROS -->
+
+<section id="nosotros">
+
+  <div class="container about-grid">
+
+    <div class="about-box">
+      🧶🌷
+    </div>
+
+    <div class="about-text">
+
+      <h2>Sobre Sandy Store</h2>
+
+      <p>
+        Sandy Store es un emprendimiento dedicado a crear amigurumis,
+        flores y detalles tejidos a crochet.
+      </p>
+
+      <p>
+        Cada producto es elaborado a mano con dedicación y atención
+        a los pequeños detalles, buscando crear regalos únicos
+        y especiales.
+      </p>
+
+      <p>
+        Trabajamos de forma <strong>100% online</strong>.
+        No contamos con tienda física.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACTO -->
+
+<section class="contact" id="contacto">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>Hablemos</span>
+
+      <h2>Contáctanos 💌</h2>
+
+      <p>
+        Consulta productos, disponibilidad y pedidos personalizados.
+      </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+      <a
+        class="contact-card"
+        href="https://wa.me/56969151966"
+        target="_blank"
+      >
+
+        <div class="contact-icon">💚</div>
+
+        <h3>WhatsApp</h3>
+
+        <p>+56 9 6915 1966</p>
+
+      </a>
+
+
+      <a
+        class="contact-card"
+        href="https://www.instagram.com/sandy_store09/"
+        target="_blank"
+      >
+
+        <div class="contact-icon">📸</div>
+
+        <h3>Instagram</h3>
+
+        <p>@sandy_store09</p>
+
+      </a>
+
+
+      <a
+        class="contact-card"
+        href="mailto:sandystore09@gmail.com"
+      >
+
+        <div class="contact-icon">💌</div>
+
+        <h3>Correo</h3>
+
+        <p>sandystore09@gmail.com</p>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>Sandy Store 🧶</strong>
+  </p>
+
+  <p>
+    Amigurumis y crochet hechos a mano ♡
+  </p>
+
+  <p>
+    Emprendimiento online · Sin tienda física
+  </p>
+
+  <p style="margin-top:15px;font-size:.85rem;opacity:.7;">
+    © 2026 Sandy Store
+  </p>
+
+</footer>
+
+
+<!-- BOTÓN FLOTANTE -->
+
+<a
+  class="floating-whatsapp"
+  href="https://wa.me/56969151966?text=Hola%20Sandy%20Store%20💗%20Quisiera%20hacer%20una%20consulta."
+  target="_blank"
+  aria-label="Contactar por WhatsApp"
+>
+  ♡
+</a>
+
+</body>
+</html>
