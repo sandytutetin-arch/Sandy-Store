@@ -1,0 +1,12 @@
+SANDY STORE - CÓMO SUBIR LA PÁGINA A GITHUB
+
+1. Descomprime el archivo Sandy-Store.zip.
+2. Entra a tu repositorio de GitHub.
+3. Elimina el archivo viejo llamado index.html.txt.
+4. Presiona "Agregar archivo" y luego "Cargar archivos".
+5. Abre la carpeta Sandy-Store que descomprimiste.
+6. Selecciona TODO lo que está dentro: index.html, logo.png, la carpeta img y este archivo.
+7. Arrastra esos elementos a GitHub y presiona "Commit changes".
+8. Espera uno o dos minutos y abre la dirección de GitHub Pages.
+
+IMPORTANTE: no subas solamente el archivo ZIP. Primero debes descomprimirlo y subir todo su contenido.
